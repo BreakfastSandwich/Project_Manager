@@ -65,6 +65,10 @@ function printProjectsData() {
 
     // retreives project list from storage to ensure list is up to date
     var projects = readProjectList(); 
+    // var projectdate = projectDateEl.val()
+    // var projectname = projectNameEl.val().trim();
+    // var projecttype = projectTypeEl.val()
+    
 
     // loop through each project and create a new row
     for (var i = 0; i < projects.length; i++); {
@@ -77,7 +81,7 @@ function printProjectsData() {
     var rowEl = $('<tr>');
     var nameEl = $('<td>').text(project.name);
     var typeEl = $('<td>').text(project.type);
-    var dateEl = $('<td>').text(project.date.format(MM/DD/YYY));
+    var dateEl = $('<td>').text(projectDate.format('MM/DD/YYY'));
 
     // save the index of a ptoject as a data attribute on the button. this
     // will be used when removing the project from the array.
